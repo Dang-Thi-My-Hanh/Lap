@@ -1,0 +1,48 @@
+package Lap_05;
+
+public class SinglyLinkedList<E> {
+    private Node<E> head = null;
+    private Node<E> tail = null;
+    private int size;
+    public SinglyLinkedList() {
+        super();
+    }
+    public int size() {
+        return this.size;
+    }
+    public boolean isEmpty() {
+        if(size == 0)
+            return true;
+        else
+            return false;
+    }
+    public E first() {
+       if(!isEmpty())
+           return this.head.getData();
+       else
+           return null;
+    }
+    public E last() {
+        if (!isEmpty())
+            return this.tail.getData();
+        else
+            return null;
+    }
+    public void addFirst (E e) {
+        Node<E> newHead = new Node<>(e);
+        newHead.setData(this.head);
+        this.head = newHead;
+    }
+    public void addLast(E e) {
+        Node<E> lastHead = new Node<>(e);
+        lastHead.setData(this.tail);
+        this.tail = lastHead;
+    }
+    public E removeFirst() {
+        return null; }
+    public E removeLast() {
+        return null; }
+   
+    }
+
+}
